@@ -14,8 +14,9 @@ class Snake:
             self.add_segment(pos)
 
     def move(self):
-        for num in range(len(self.segments)-1, 0, -1):
-            self.segments[num].goto(self.segments[num - 1].xcor(), self.segments[num - 1].ycor())
+        for num in range(len(self.segments) - 1, 0, -1):
+            self.segments[num].goto(
+                self.segments[num - 1].xcor(), self.segments[num - 1].ycor())
         self.segments[0].fd(15)
 
     def up(self):
